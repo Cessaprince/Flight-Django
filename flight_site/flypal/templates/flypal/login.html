@@ -8,25 +8,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This is the login page for the flight website.">
     <link rel="stylesheet" href="{% static 'cessa css/flypal.css' %}">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="icon" type="image" href="../images/webicon_plane.png">
-
-    <script src="../js/bootstrap.min.js"></script>
-
-    <title>FlyPal Login Page</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="icon" type="image" href="{% static 'images/webicon_plane.png' %}">
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <title>{% block title %} FlyPal Login Page {% endblock %}</title>
 </head>
 <body class="login_body">
     <div class="login_box">
         <form action="" method="post" id="login_form">
+            {% csrf_token %}
             {{form}}
             <h3 id="login_form_head">Login</h3>
             <hr>
-            <input type="email" placeholder="Email Address" id="login_form_email">
+            <input type="email" name="email" placeholder="Email Address" id="login_form_email">
             <br>
-            <input type="password" placeholder="Password" id="login_form_password">
+            <input type="password" name="password" placeholder="Password" id="login_form_password">
             <br>
-            <button id="login_button"><a href="./auth_home_page.html">Login</a></button>
-            <p>Not a member? <a href="./register.html">Signup</a></p>
+            <button id="login_button">Login</button>
+            <p>Not a member? <a href="{% url 'register' %}">Signup</a></p>
         </form>
     </div>
 </body>
