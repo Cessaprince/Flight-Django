@@ -1,0 +1,269 @@
+<!-- The home page that only gets displayed to non-authenticated users/general page. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the home page for the flight website.">
+    <link rel="stylesheet" href="../cessa css/weshouldfly.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="icon" type="image" href="../images/webicon_plane.png">
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <title>WeShouldFly Home_Page</title>
+</head>
+<body>
+    <div class="bg_image">
+        <nav class="navbar navbar-expand-lg" id="nav_for_home_page">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">WeShouldFly</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="home_page.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Flights
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="register.html">Get flights at cheaper rates</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="register.html">Book for accomodations on trips</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="register.html">Looking for something else?</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                      
+                        <ul class="navbar-nav justify-content-end">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="register.html">Register</a>
+                            </li>
+                        </ul>
+    
+                        <input class="form-control me-1" type="search" placeholder="Search for flights here" aria-label="Search">
+                        <button class="btn btn-outline-danger" type="submit" id="nav_go"><a href="./register.html">Go</a></button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="first_body">
+            <div class="row" id="first_row">
+                <div class="col-3">
+                    <div class="row">
+                        <img src="../images/plane_pic.jpg" alt="" id="plane_pic">
+                    </div>
+                    <div class="row"><p><a href="">Flight</a></p></div>
+                </div>
+                <div class="col-3">
+                    <div class="row">
+                        <img src="../images/luggage_pic.png" alt="" id="luggage">
+                    </div>
+                    <div class="row"><p><a href="">Travel Extras</a></p></div>
+                </div>
+                <div class="col-3">
+                    <div class="row">
+                        <img src="../images/car_image.png" alt="" id="car_sketch">
+                    </div>
+                    <div class="row"><p><a href="">Transport</a></p></div>
+                </div>
+                <div class="col-3">
+                    <div class="row">
+                        <img src="../images/building_pic.png" alt="" id="building_pic">
+                    </div>
+                    <div class="row"><p><a href="">Lodging</a></p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="second_box" class="container pt-2 mt-5">
+        <div class="ah">
+            <div class="row" id="up_row">
+                <div class="col-4" id="button_row">
+                   <input type="radio" name="button" id="button"> One-Way
+                    <input type="radio" name="button" id="button"> Round Trip
+                    <input type="radio" name="button" id="button"> Multi Way
+                </div>
+                <div class="col-3">
+                    <select name="flight" id="flight">
+                        <option value="0">Economy</option>
+                        <option value="1">Premium Economy</option>
+                        <option value="2">Business Class</option>
+                        <option value="3">First Class</option>
+                    </select>
+                </div>
+                <div class="col-5">
+                    <p class="wrteup px-2" id="writeup"> Book International and Domestic Flights</p>
+                </div>
+            </div>
+            <div class="row">
+                <h3 class="word">WeShouldFly Flight Options Available here</h3>
+            </div>
+    
+            <input type="checkbox" class="pt-4"> My dates are flexible(+/- 3days)
+            <div class="flight_search">
+                <button id="flight_search"><a href="">Submit</a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="explanation">
+        <div class="row">
+            <h3>Search Flights, Hotels and Holiday Packages</h3>
+        </div>
+        <div class="row" id="explanation_paragraph">
+            <p>Welcome to WeShouldFly, your premier travel partner! Search, book, and explore the world with us. As a leading tour operator and travel agency, we specialize in curating unforgettable experiences for individuals , families and corporate travellers.
+                Our extensive network and expertise enable us to offer:
+            </p>
+            <p>Competitive fares on flights, luxurious accomodations in top-rated hotels, and meticulously crafted holiday packages tailored to your preferences. Whether you're seeking relaxation, adventure, or cultural immersion, our dedicated team ensures seamless travel arrangements, exceptional customer service, and memories
+                to last a lifetime. Browse our selection, and let WeShouldFly take you on thr journey of a lifetime.
+            </p>
+        </div>
+
+        <div class="row" id="pic_div">
+            <div class="col" id="pic_pic">
+                <img src="../images/deal_pic.jpg" alt="">
+            </div>
+            <div class="col-6" id="hmm">
+                <div class="row">
+                    <h3>Don't miss a great deal</h3>
+                </div>
+                <div class="row">
+                    <p class="lead">Stay one step ahead. Find the best value travel with the latest deals, tips and news.</p>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <input type="email" placeholder="Enter email address">
+                    </div>
+                    <div class="col-4">
+                        <button class="subscribe"><a href="">Subscribe</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="third_box">
+        <div class="row" id="row_head">
+            <h3>Cheap Flights from Nigeria</h3>
+        </div>
+        <div class="row" id="row_head_row1">
+            <div class="col-4" id="col1">
+                <h4>African Flights</h4>
+                <p><a href="">Flights to Accra</a></p>
+                <p><a href="">Flights to Nairobi</a></p>
+                <p><a href="">Flights to Ghana</a></p>
+                <p><a href="">Flights to Johannesburg</a></p>
+            </div>
+            <div class="col-4" id="col2">
+                <h4>European Flights</h4>
+                <p><a href="">Flights to London</a></p>
+                <p><a href="">Flights to Istanbul</a></p>
+                <p><a href="">Flights to Manchester</a></p>
+                <p><a href="">Flights to Paris</a></p>
+            </div>
+            <div class="col-4" id="col3">
+                <h4>Asian Flights</h4>
+                <p><a href="">Flights to Paris</a></p>
+                <p><a href="">Flights to Abu Dhabi</a></p>
+                <p><a href="">Flights to Guangzhou</a></p>
+                <p><a href="">Flights to New Delhi</a></p>
+            </div>
+        </div>
+        <div class="row" id="row_head2">
+            <h3>Book Cheap Hotels</h3>
+        </div>
+        <div class="row" id="row_head2_row1">
+            <div class="col-4" id="col1">
+                <h4>African Hotels</h4>
+                <p><a href="">Hotels in Accra</a></p>
+                <p><a href="">Hotels in Nairobi</a></p>
+                <p><a href="">Hotels in Ghana</a></p>
+                <p><a href="">Hotels in Johannesburg</a></p>
+            </div>
+            <div class="col-4" id="col2">
+                <h4>European Flights</h4>
+                <p><a href="">Hotels in London</a></p>
+                <p><a href="">Hotels in Istanbul</a></p>
+                <p><a href="">Hotels in Manchester</a></p>
+                <p><a href="">Hotels in Paris</a></p>
+            </div>
+            <div class="col-4" id="col3">
+                <h4>Asian Flights</h4>
+                <p><a href="">Hotels in Dubai</a></p>
+                <p><a href="">Hotels in Abu Dhabi</a></p>
+                <p><a href="">Hotels in Guangzhou</a></p>
+                <p><a href="">Hotels in Guangzhou</a></p>
+            </div>
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col-4" id="new_col1">
+                <h4>Get exclusive deals on our products</h4>
+                <p>Book Flights: International and domestic flights, Search for hotels and Holiday Packages</p>
+            </div>
+            <div class="col-4">
+                <h4>Follow Us</h4>
+                <p>Stay tuned and access the latest deals and discounts</p>
+            </div>
+            <div class="col-4">
+                <h4>Get inspired for your next trip</h4>
+                <p>Find information about travel destinations and next available flights</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid">
+        <div class="row" id="footer_row">
+            <div class="col-3">
+                <h2>WeShouldFly</h2>
+                <div class="row"><img src="../images/playstore.png" alt=""></div>
+                <div class="row"><img src="../images/appstore.png" alt=""></div>
+            </div>
+            <div class="col-3" id="white">
+                <h4>Company</h4>
+                <p><a href="">About Us</a></p>
+                <p><a href="">WeShouldFly Affiliates</a></p>
+                <p><a href="">Refer a Customer</a></p>
+                <p><a href="">Blog</a></p>
+                <p><a href="">Contact Us</a></p>
+    
+            </div>
+            <div class="col-3">
+                <h4>Useful Links</h4>
+                <p><a href="">Policy</a></p>
+                <p><a href="">Terms and Conditions</a></p>
+            </div>
+            <div class="col-3">
+                <h4>Contact Information</h4>
+                <p>You could contact <a href="">+2349023899735</a> on Sms or WhatsApp</p>
+            </div>
+        </div>
+        <div class="row" id="footer_row2">
+            <div class="col-5">
+                <h4>Connect With Us</h4>
+                <p><a href="www.facebook.com">Facebook</a></p>
+                <p><a href="www.instagram.com">Instagram</a></p>
+                <p><a href="www.telegram.com">Telegram</a></p>
+                <p><a href="www.tiktok.com">Tiktok</a></p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <p id="copyright">Copyright &copy; 2008-2024 WeShouldFly.com Limited</p>
+        </div>
+    </footer>
+</body>
+</html> 

@@ -1,0 +1,139 @@
+<!-- The home page that only gets displayed to authenticated users. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the auth_home page for the flight website.">
+    <link rel="stylesheet" href="../cessa css/weshouldfly.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="icon" type="image" href="../images/webicon_plane.png">
+
+    <script src="../js/bootstrap.min.js"></script>
+    <title>WeShouldFly Auth_Home Page</title>
+</head>
+<body class="auth_body">
+    <div class="container-fluid" id="auth_bg_img">
+        <div class="row" id="auth_row1">
+            <div class="col-6" id="auth_row1_col1">
+                <p>WeShouldFly <span>Find Cheap tickets, Flights and Airfare</span></p>
+            </div>
+            <div class="col-6" id="auth_row1_col2">
+                <p>Call Us Toll-Free! <span>+234-902-389-9735</span></p>
+            </div>
+        </div>
+        
+        <div class="row" id="flight_choice">
+            <div class="col-6" id="flight_choice_col">
+                <h4>Search for a Flight</h4>
+                <hr class="auth_hr"/>
+                <input type="radio" name="f_choice"> Return                
+                <input type="radio" name="f_choice" id="one_way"> One-way
+                <input type="radio" name="f_choice" id="multi"> Multi-City
+                <hr>
+                <div class="row" id="choice_row1">
+                    <div class="col">
+                        <label for="flying_from">Flying from</label>
+                        <br>
+                        <input type="text" placeholder="City or airport">
+                    </div>
+                    <div class="col">
+                        <label for="flying_to" >Flying to</label>
+                        <br>
+                        <input type="text" placeholder="City or airport" name="flying_to_input" value="flying_to_input_val">
+                    </div>
+                </div>
+                <div class="row" id="choice_row2">
+                    <div class="col">
+                        <label for="departing">Departing</label>
+                        <br>
+                        <input type="date" placeholder="DD/MM/YYYY">
+                    </div>
+                    <div class="col">
+                        <label for="returning">Returning</label>
+                        <br>
+                        <input type="date" placeholder="DD/MM/YYYY">
+                    </div>
+                </div>
+                <div class="row" id="choice_row3">
+                    <div class="col">
+                        <label for="adults">Adults(18+)</label>
+                        <br>
+                        <input type="number" value="18" min="18">
+                    </div>
+                    <div class="col">
+                        <label for="children">Children (0-17)</label>
+                        <br>
+                        <input type="number" value="0" min="0">
+                    </div>
+                </div>
+
+                <div class="row" id="auth_submit_row">
+                    <div class="col">
+                        <button><a href="">Search</a></button>  Save up to 20%
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="auth_writeup">
+        <h3>Cheap Flights - Book Your Flights with Us</h3>
+        <p>Discover affordable aviation with our cheap flights! We offer exclusive deals on domestic and international flights, catering
+            to diverse travel needs. Browse our extensive network of airlines and routes, ensuring comptetitive prices. Whether planning 
+            a quick getaway, family vacation or business trip, our user-friendly platform streamlines booking. Enjoy: unbeatable discounts,
+            real time price comparisons, seamless booking process, 24/7 customer support and flexible payment options. Find your dream 
+            destination without breaking the bank. Book now and take to the skies.
+        </p>
+        <h3>Find the Best Deals for Cheap Flights</h3>
+        <p>Unlock unbeatable savings on air travel with our expertly curated cheap flights. Explore a vast inventory of discounted fares
+            from leading airlines, tailored to suit diverse budgets and itineraries. Utilize intuitive search tools, comparing prices in 
+            real time to secure the most economical options. Benefit from: exclusive discounts and promotions, error fare alerts for unprecedented
+            savings, flexible travel dates and destinations, price match guarantees. 24/7 personalized customer support. 
+            Seize incredible opportunities to explore the world affordably. Search, compare and book your dream flight today!
+        </p>
+    </div>
+
+    <footer class="container-fluid">
+        <div class="row" id="footer_row">
+            <div class="col-3">
+                <h2>WeShouldFly</h2>
+                <div class="row"><img src="../images/playstore.png" alt=""></div>
+                <div class="row"><img src="../images/appstore.png" alt=""></div>
+            </div>
+            <div class="col-3" id="white">
+                <h4>Company</h4>
+                <p><a href="">About Us</a></p>
+                <p><a href="">WeShouldFly Affiliates</a></p>
+                <p><a href="">Refer a Customer</a></p>
+                <p><a href="">Blog</a></p>
+                <p><a href="">Contact Us</a></p>
+    
+            </div>
+            <div class="col-3">
+                <h4>Useful Links</h4>
+                <p><a href="">Policy</a></p>
+                <p><a href="">Terms and Conditions</a></p>
+            </div>
+            <div class="col-3">
+                <h4>Contact Information</h4>
+                <p>You could contact <a href="">+2349023899735</a> on Sms or WhatsApp</p>
+            </div>
+        </div>
+        <div class="row" id="footer_row2">
+            <div class="col-5">
+                <h4>Connect With Us</h4>
+                <p><a href="www.facebook.com">Facebook</a></p>
+                <p><a href="www.instagram.com">Instagram</a></p>
+                <p><a href="www.telegram.com">Telegram</a></p>
+                <p><a href="www.tiktok.com">Tiktok</a></p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <p id="copyright">Copyright &copy; 2008-2024 WeShouldFly.com Limited</p>
+        </div>
+    </footer>
+</body>
+</html>
