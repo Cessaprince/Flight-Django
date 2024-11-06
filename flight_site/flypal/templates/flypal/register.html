@@ -1,12 +1,15 @@
 <!-- To make use of this website, you must register at any given point in time to access information -->
 
+{% load static %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This is the registration page for the flight website.">
-    <link rel="stylesheet" href="../cessa css/weshouldfly.css">
+    <link rel="stylesheet" href="{% static 'cessa css/flypal.css' %}">
     <link rel="icon" type="image" href="../images/webicon_plane.png">
 
     <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -15,7 +18,8 @@
 </head>
 <body class="register_body">
     <div class="register_box">
-        <form action="" id="register_form">
+        <form action="" method="post" id="register_form">
+            {{form}}
             <h3 id="register_form_head">SignUp</h3>
             <hr>
             <input type="email" placeholder="Email Address" id="register_form_email">

@@ -1,4 +1,5 @@
 <!-- Login if you are an authenticated user. -->
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This is the login page for the flight website.">
-    <link rel="stylesheet" href="../cessa css/weshouldfly.css">
+    <link rel="stylesheet" href="{% static 'cessa css/flypal.css' %}">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="icon" type="image" href="../images/webicon_plane.png">
 
@@ -16,7 +17,8 @@
 </head>
 <body class="login_body">
     <div class="login_box">
-        <form action="" id="login_form">
+        <form action="" method="post" id="login_form">
+            {{form}}
             <h3 id="login_form_head">Login</h3>
             <hr>
             <input type="email" placeholder="Email Address" id="login_form_email">
