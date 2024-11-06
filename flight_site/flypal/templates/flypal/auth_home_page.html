@@ -23,59 +23,64 @@
                 <p>Call Us Toll-Free! <span>+234-902-389-9735</span></p>
             </div>
         </div>
-        
-        <div class="row" id="flight_choice">
-            <div class="col-6" id="flight_choice_col">
-                <h4>Search for a Flight</h4>
-                <hr class="auth_hr"/>
-                <input type="radio" name="f_choice"> Return                
-                <input type="radio" name="f_choice" id="one_way"> One-way
-                <input type="radio" name="f_choice" id="multi"> Multi-City
-                <hr>
-                <div class="row" id="choice_row1">
-                    <div class="col">
-                        <label for="flying_from">Flying from</label>
-                        <br>
-                        <input type="text" placeholder="City or airport">
-                    </div>
-                    <div class="col">
-                        <label for="flying_to" >Flying to</label>
-                        <br>
-                        <input type="text" placeholder="City or airport" name="flying_to_input" value="flying_to_input_val">
-                    </div>
-                </div>
-                <div class="row" id="choice_row2">
-                    <div class="col">
-                        <label for="departing">Departing</label>
-                        <br>
-                        <input type="date" placeholder="DD/MM/YYYY">
-                    </div>
-                    <div class="col">
-                        <label for="returning">Returning</label>
-                        <br>
-                        <input type="date" placeholder="DD/MM/YYYY">
-                    </div>
-                </div>
-                <div class="row" id="choice_row3">
-                    <div class="col">
-                        <label for="adults">Adults(18+)</label>
-                        <br>
-                        <input type="number" value="18" min="18">
-                    </div>
-                    <div class="col">
-                        <label for="children">Children (0-17)</label>
-                        <br>
-                        <input type="number" value="0" min="0">
-                    </div>
-                </div>
 
-                <div class="row" id="auth_submit_row">
-                    <div class="col">
-                        <button><a href="">Search</a></button>  Save up to 20%
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form}}
+            <div class="row" id="flight_choice">
+                <div class="col-6" id="flight_choice_col">
+                    <h4>Search for a Flight</h4>
+                    <hr class="auth_hr"/>
+                    <input type="radio" name="f_choice"> Return                
+                    <input type="radio" name="f_choice" id="one_way"> One-way
+                    <input type="radio" name="f_choice" id="multi"> Multi-City
+                    <hr>
+                    <div class="row" id="choice_row1">
+                        <div class="col">
+                            <label for="flying_from">Flying from</label>
+                            <br>
+                            <input type="text" placeholder="City or airport" name="flying_from">
+                        </div>
+                        <div class="col">
+                            <label for="flying_to" >Flying to</label>
+                            <br>
+                            <input type="text" placeholder="City or airport" name="flying_to_input">
+                        </div>
+                    </div>
+                    <div class="row" id="choice_row2">
+                        <div class="col">
+                            <label for="departing">Departing</label>
+                            <br>
+                            <input type="date" placeholder="DD/MM/YYYY" name="departing">
+                        </div>
+                        <div class="col">
+                            <label for="returning">Returning</label>
+                            <br>
+                            <input type="date" placeholder="DD/MM/YYYY" name="returning">
+                        </div>
+                    </div>
+                    <div class="row" id="choice_row3">
+                        <div class="col">
+                            <label for="adults">Adults(18+)</label>
+                            <br>
+                            <input type="number" min="18" name="adults">
+                        </div>
+                        <div class="col">
+                            <label for="children">Children (0-17)</label>
+                            <br>
+                            <input type="number" value="0" min="0" name="children">
+                        </div>
+                    </div>
+    
+                    <div class="row" id="auth_submit_row">
+                        <div class="col">
+                            <button><a href="">Search</a></button>  Save up to 20%
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
+
     </div>
 
     <div class="container-fluid" id="auth_writeup">

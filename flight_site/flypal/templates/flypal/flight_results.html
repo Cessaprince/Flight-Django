@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the flight results for the flight website.">
+    <link rel="stylesheet" href="{% static 'cessa css/flypal.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="icon" type="image" href="{% static 'images/webicon_plane.png' %}">
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <title>{% block title %} FlyPal Flight Result {% endblock %}</title>
+</head>
+<body>
+    <h2>Flight Search Results</h2>
+    <p>From: {{ flying_from }}</p>
+    <p>To: {{ flying_to }}</p>
+    <p>Departure Date: {{ departing }}</p>
+    <p>Return Date: {{ returning }}</p>
+
+    <!-- Display available flights -->
+    <h3>Available Flights</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Flight Number</th>
+                <th>Airline</th>
+                <th>Departure Time</th>
+                <th>Arrival Time</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for flight in flights %}
+            <tr>
+                <td>{{ flight.flight_number }}</td>
+                <td>{{ flight.airline }}</td>
+                <td>{{ flight.departure_time }}</td>
+                <td>{{ flight.arrival_time }}</td>
+                <td>{{ flight.price }}</td>
+                <td><a href="{% url 'book_flight' flight.id %}">Book Now</a></td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">No flights found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

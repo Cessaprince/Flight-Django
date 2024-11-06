@@ -29,3 +29,34 @@ class User(AbstractBaseUser):
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
+
+
+from django.db import models
+
+class Airport(models.Model):
+    code = models.CharField(max_length=3, unique=True)
+    name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.name
+
+
+class Flight(models.Model):
+    AIRCRAFT_TYPES = [
+        ('Economy', 'Economy'),
+        ('Business', 'Business'),
+        ('First Class', 'First Class'),
+    ]
+
+    flight_number = models.CharField(max_length=10, unique=True)
+    departure_airport = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name='departure_flights')
+    arrival_airport = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name='arrival_flights')
+    departure_date = models.DateField()
+    return_date = models.DateField(null=True, blank=True)
+    departure_time = models.TimeField()
+    arrival_time = models.TimeField()
+    aircraft_type = models.CharField(max_length=20, choices=AIRCRAFT_TYPES)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+
+    def __str__(self):
+        return f"{self.flight_number} - {self.departure_airport.name} to {self.arrival_airport.name}"
